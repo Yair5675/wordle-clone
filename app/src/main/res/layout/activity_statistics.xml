@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color"
+    tools:context=".StatisticsActivity">
+
+    <TextView
+        android:id="@+id/tv_stat_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/stats_title"
+        android:textAllCaps="true"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/gl_upper_lim" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gl_upper_lim"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.10" />
+
+    <TextView
+        android:id="@+id/tv_played_data"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toStartOf="@+id/tv_win_perc_data"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_stat_title" />
+
+    <TextView
+        android:id="@+id/tv_win_perc_data"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toStartOf="@+id/tv_streak_data"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tv_played_data"
+        app:layout_constraintTop_toTopOf="@+id/tv_played_data" />
+
+    <TextView
+        android:id="@+id/tv_streak_data"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toStartOf="@+id/tv_max_streak_data"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tv_win_perc_data"
+        app:layout_constraintTop_toTopOf="@+id/tv_win_perc_data" />
+
+    <TextView
+        android:id="@+id/tv_max_streak_data"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tv_streak_data"
+        app:layout_constraintTop_toTopOf="@+id/tv_streak_data" />
+
+    <TextView
+        android:id="@+id/tv_played_desc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/played_desc"
+        android:textColor="@color/btn_text_clr"
+        app:layout_constraintEnd_toEndOf="@+id/tv_played_data"
+        app:layout_constraintStart_toStartOf="@+id/tv_played_data"
+        app:layout_constraintTop_toBottomOf="@+id/tv_played_data" />
+
+    <TextView
+        android:id="@+id/tv_win_perc_desc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/win_perc_desc"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="@+id/tv_win_perc_data"
+        app:layout_constraintStart_toStartOf="@+id/tv_win_perc_data"
+        app:layout_constraintTop_toBottomOf="@+id/tv_win_perc_data" />
+
+    <TextView
+        android:id="@+id/tv_current_streak_desc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/current_streak_desc"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="@+id/tv_streak_data"
+        app:layout_constraintStart_toStartOf="@+id/tv_streak_data"
+        app:layout_constraintTop_toBottomOf="@+id/tv_streak_data" />
+
+    <TextView
+        android:id="@+id/tv_max_streak_desc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/max_streak_desc"
+        android:textAlignment="center"
+        android:textColor="@color/btn_text_clr"
+        app:layout_constraintEnd_toEndOf="@+id/tv_max_streak_data"
+        app:layout_constraintStart_toStartOf="@+id/tv_max_streak_data"
+        app:layout_constraintTop_toBottomOf="@+id/tv_max_streak_data" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gl_left_lim"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.05" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gl_right_lim"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.95" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gl_lower_lim"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.85" />
+
+    <TextView
+        android:id="@+id/tv_correct_word"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="@string/correct_word_txt"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toStartOf="@+id/gl_right_lim"
+        app:layout_constraintStart_toStartOf="@+id/gl_left_lim"
+        app:layout_constraintTop_toBottomOf="@+id/tv_current_streak_desc" />
+
+    <TextView
+        android:id="@+id/tv_guess_data"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/guesses_data"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/tv_time_data"
+        app:layout_constraintStart_toStartOf="@+id/gl_left_lim"
+        app:layout_constraintTop_toBottomOf="@+id/tv_correct_word" />
+
+    <TextView
+        android:id="@+id/tv_time_data"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/time_data"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/tv_best_time"
+        app:layout_constraintStart_toStartOf="@+id/gl_left_lim"
+        app:layout_constraintTop_toBottomOf="@+id/tv_guess_data" />
+
+    <TextView
+        android:id="@+id/tv_best_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="@string/best_time"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/btn_restart"
+        app:layout_constraintStart_toStartOf="@+id/gl_left_lim"
+        app:layout_constraintTop_toBottomOf="@+id/tv_time_data" />
+
+    <Button
+        android:id="@+id/btn_back_to_menu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/opening_activity_clr"
+        android:text="@string/back_to_menu"
+        app:layout_constraintBottom_toTopOf="@+id/gl_lower_lim"
+        app:layout_constraintEnd_toStartOf="@+id/gl_right_lim"
+        app:layout_constraintStart_toStartOf="@+id/gl_left_lim" />
+
+    <Button
+        android:id="@+id/btn_restart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="@color/opening_activity_clr"
+        android:text="@string/restart_btn_text"
+        app:layout_constraintBottom_toTopOf="@+id/btn_back_to_menu"
+        app:layout_constraintEnd_toEndOf="@+id/btn_back_to_menu"
+        app:layout_constraintStart_toStartOf="@+id/btn_back_to_menu" />
+
+    <Button
+        android:id="@+id/btn_clear_stats"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/opening_activity_clr"
+        android:text="@string/clear_stats_txt"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/gl_right_lim"
+        app:layout_constraintStart_toStartOf="@+id/gl_left_lim"
+        app:layout_constraintTop_toTopOf="@+id/gl_lower_lim" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

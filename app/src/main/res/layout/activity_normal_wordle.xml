@@ -1,0 +1,746 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/background"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color"
+    android:backgroundTint="@color/background_color"
+    tools:context=".NormalWordleActivity">
+
+    <Button
+        android:id="@+id/btnGuess0_0"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintEnd_toStartOf="@+id/btnGuess0_1"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="spread"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <Button
+        android:id="@+id/btnGuess1_0"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        app:layout_constraintBottom_toTopOf="@+id/btnGuess2_0"
+        app:layout_constraintEnd_toStartOf="@+id/btnGuess1_1"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnGuess0_0"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <Button
+        android:id="@+id/btnGuess2_0"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        app:layout_constraintBottom_toTopOf="@+id/btnGuess3_0"
+        app:layout_constraintEnd_toStartOf="@+id/btnGuess2_1"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnGuess1_0"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <Button
+        android:id="@+id/btnGuess3_0"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        app:layout_constraintBottom_toTopOf="@+id/btnGuess4_0"
+        app:layout_constraintEnd_toStartOf="@+id/btnGuess3_1"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnGuess2_0"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <Button
+        android:id="@+id/btnGuess4_0"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        app:layout_constraintBottom_toTopOf="@+id/btnGuess5_0"
+        app:layout_constraintEnd_toStartOf="@+id/btnGuess4_1"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnGuess3_0"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <Button
+        android:id="@+id/btnGuess5_0"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        app:layout_constraintBottom_toTopOf="@+id/divKeyboard"
+        app:layout_constraintEnd_toStartOf="@+id/btnGuess5_1"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnGuess4_0"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <View
+        android:id="@+id/divKeyboard"
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="?android:attr/listDivider"
+        android:backgroundTint="@color/background_color"
+        app:layout_constraintBottom_toTopOf="@+id/keyboardLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnGuess5_0" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/keyboardLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/divKeyboard"
+        app:layout_constraintVertical_bias="1.0">
+
+        <Button
+            android:id="@+id/btnQ"
+            android:layout_width="40dp"
+            android:layout_height="60dp"
+            android:text="q"
+            android:textAllCaps="true"
+            android:textSize="9sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/btnA"
+            app:layout_constraintEnd_toStartOf="@+id/btnW"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_chainStyle="spread"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="packed"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <Button
+            android:id="@+id/btnW"
+            android:layout_width="40dp"
+            android:layout_height="60dp"
+            android:text="w"
+            android:textAllCaps="true"
+            android:textSize="9sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/btnE"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/btnQ"
+            app:layout_constraintTop_toTopOf="@+id/btnQ"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <Button
+            android:id="@+id/btnE"
+            android:layout_width="40dp"
+            android:layout_height="60dp"
+            android:text="e"
+            android:textAllCaps="true"
+            android:textSize="9sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/btnR"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/btnW"
+            app:layout_constraintTop_toTopOf="@+id/btnW"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <Button
+            android:id="@+id/btnR"
+            android:layout_width="40dp"
+            android:layout_height="60dp"
+            android:text="r"
+            android:textAllCaps="true"
+            android:textSize="9sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/btnT"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/btnE"
+            app:layout_constraintTop_toTopOf="@+id/btnE"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <Button
+            android:id="@+id/btnT"
+            android:layout_width="40dp"
+            android:layout_height="60dp"
+            android:text="t"
+            android:textAllCaps="true"
+            android:textSize="9sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/btnY"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/btnR"
+            app:layout_constraintTop_toTopOf="@+id/btnR"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <Button
+            android:id="@+id/btnY"
+            android:layout_width="40dp"
+            android:layout_height="60dp"
+            android:text="y"
+            android:textAllCaps="true"
+            android:textSize="9sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/btnU"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/btnT"
+            app:layout_constraintTop_toTopOf="@+id/btnT"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <Button
+            android:id="@+id/btnU"
+            android:layout_width="40dp"
+            android:layout_height="60dp"
+            android:text="u"
+            android:textAllCaps="true"
+            android:textSize="9sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/btnI"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/btnY"
+            app:layout_constraintTop_toTopOf="@+id/btnY"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <Button
+            android:id="@+id/btnI"
+            android:layout_width="40dp"
+            android:layout_height="60dp"
+            android:text="i"
+            android:textAllCaps="true"
+            android:textSize="9sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/btnO"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/btnU"
+            app:layout_constraintTop_toTopOf="@+id/btnU"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <Button
+            android:id="@+id/btnO"
+            android:layout_width="40dp"
+            android:layout_height="60dp"
+            android:text="o"
+            android:textAllCaps="true"
+            android:textSize="9sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/btnP"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/btnI"
+            app:layout_constraintTop_toTopOf="@+id/btnI"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <Button
+            android:id="@+id/btnP"
+            android:layout_width="40dp"
+            android:layout_height="60dp"
+            android:text="p"
+            android:textAllCaps="true"
+            android:textSize="9sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/btnO"
+            app:layout_constraintTop_toTopOf="@+id/btnO"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <Button
+            android:id="@+id/btnA"
+            android:layout_width="40dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="16dp"
+            android:text="a"
+            android:textAllCaps="true"
+            android:textSize="9sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/btnZ"
+            app:layout_constraintEnd_toStartOf="@+id/btnS"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_chainStyle="spread"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnQ"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <Button
+            android:id="@+id/btnS"
+            android:layout_width="40dp"
+            android:layout_height="60dp"
+            android:text="s"
+            android:textAllCaps="true"
+            android:textSize="9sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/btnD"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/btnA"
+            app:layout_constraintTop_toTopOf="@+id/btnA"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <Button
+            android:id="@+id/btnD"
+            android:layout_width="40dp"
+            android:layout_height="60dp"
+            android:text="d"
+            android:textAllCaps="true"
+            android:textSize="9sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/btnF"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/btnS"
+            app:layout_constraintTop_toTopOf="@+id/btnS"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <Button
+            android:id="@+id/btnF"
+            android:layout_width="40dp"
+            android:layout_height="60dp"
+            android:text="f"
+            android:textAllCaps="true"
+            android:textSize="9sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/btnG"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/btnD"
+            app:layout_constraintTop_toTopOf="@+id/btnD"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <Button
+            android:id="@+id/btnG"
+            android:layout_width="40dp"
+            android:layout_height="60dp"
+            android:text="g"
+            android:textAllCaps="true"
+            android:textSize="9sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/btnH"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/btnF"
+            app:layout_constraintTop_toTopOf="@+id/btnF"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <Button
+            android:id="@+id/btnH"
+            android:layout_width="40dp"
+            android:layout_height="60dp"
+            android:text="h"
+            android:textAllCaps="true"
+            android:textSize="9sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/btnJ"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/btnG"
+            app:layout_constraintTop_toTopOf="@+id/btnG"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <Button
+            android:id="@+id/btnJ"
+            android:layout_width="40dp"
+            android:layout_height="60dp"
+            android:text="j"
+            android:textAllCaps="true"
+            android:textSize="9sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/btnK"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/btnH"
+            app:layout_constraintTop_toTopOf="@+id/btnH"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <Button
+            android:id="@+id/btnK"
+            android:layout_width="40dp"
+            android:layout_height="60dp"
+            android:text="k"
+            android:textAllCaps="true"
+            android:textSize="9sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/btnL"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/btnJ"
+            app:layout_constraintTop_toTopOf="@+id/btnJ"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <Button
+            android:id="@+id/btnL"
+            android:layout_width="40dp"
+            android:layout_height="60dp"
+            android:layout_marginEnd="16dp"
+            android:text="l"
+            android:textAllCaps="true"
+            android:textSize="9sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/btnK"
+            app:layout_constraintTop_toTopOf="@+id/btnK"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <Button
+            android:id="@+id/btnEnter"
+            android:layout_width="70dp"
+            android:layout_height="60dp"
+            android:backgroundTint="@color/normal_btn_background_clr"
+            android:text="Enter"
+            android:textAllCaps="true"
+            android:textColor="@color/btn_text_clr"
+            android:textSize="9sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@id/btnZ"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_chainStyle="spread_inside"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/btnZ" />
+
+        <Button
+            android:id="@+id/btnZ"
+            android:layout_width="39dp"
+            android:layout_height="60dp"
+            android:text="z"
+            android:textAllCaps="true"
+            android:textSize="9sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/btnX"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@id/btnEnter"
+            app:layout_constraintTop_toTopOf="@+id/btnEnter"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <Button
+            android:id="@+id/btnX"
+            android:layout_width="39dp"
+            android:layout_height="60dp"
+            android:text="x"
+            android:textAllCaps="true"
+            android:textSize="9sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/btnC"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/btnZ"
+            app:layout_constraintTop_toTopOf="@+id/btnZ"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <Button
+            android:id="@+id/btnC"
+            android:layout_width="39dp"
+            android:layout_height="60dp"
+            android:text="c"
+            android:textAllCaps="true"
+            android:textSize="9sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/btnV"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/btnX"
+            app:layout_constraintTop_toTopOf="@+id/btnX"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <Button
+            android:id="@+id/btnV"
+            android:layout_width="39dp"
+            android:layout_height="60dp"
+            android:text="v"
+            android:textAllCaps="true"
+            android:textSize="9sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/btnB"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/btnC"
+            app:layout_constraintTop_toTopOf="@+id/btnC"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <Button
+            android:id="@+id/btnB"
+            android:layout_width="39dp"
+            android:layout_height="60dp"
+            android:text="b"
+            android:textAllCaps="true"
+            android:textSize="9sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/btnN"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/btnV"
+            app:layout_constraintTop_toTopOf="@+id/btnV"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <Button
+            android:id="@+id/btnN"
+            android:layout_width="39dp"
+            android:layout_height="60dp"
+            android:text="n"
+            android:textAllCaps="true"
+            android:textSize="9sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/btnM"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/btnB"
+            app:layout_constraintTop_toTopOf="@+id/btnB"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <Button
+            android:id="@+id/btnM"
+            android:layout_width="39dp"
+            android:layout_height="60dp"
+            android:text="m"
+            android:textAllCaps="true"
+            android:textSize="9sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/btnBackspace"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/btnN"
+            app:layout_constraintTop_toTopOf="@+id/btnN"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <Button
+            android:id="@+id/btnBackspace"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:backgroundTint="@color/normal_btn_background_clr"
+            android:text="@string/backspace"
+            android:textSize="9sp"
+            app:layout_constraintBottom_toBottomOf="@+id/btnM"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/btnM"
+            app:layout_constraintTop_toTopOf="@+id/btnM" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <Button
+        android:id="@+id/btnGuess5_2"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        app:layout_constraintEnd_toStartOf="@+id/btnGuess5_3"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btnGuess5_1"
+        app:layout_constraintTop_toTopOf="@+id/btnGuess5_1"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <Button
+        android:id="@+id/btnGuess5_4"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btnGuess5_3"
+        app:layout_constraintTop_toTopOf="@+id/btnGuess5_3"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <Button
+        android:id="@+id/btnGuess5_3"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        app:layout_constraintEnd_toStartOf="@+id/btnGuess5_4"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btnGuess5_2"
+        app:layout_constraintTop_toTopOf="@+id/btnGuess5_2"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <Button
+        android:id="@+id/btnGuess5_1"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        app:layout_constraintEnd_toStartOf="@+id/btnGuess5_2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btnGuess5_0"
+        app:layout_constraintTop_toTopOf="@+id/btnGuess5_0"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <Button
+        android:id="@+id/btnGuess0_1"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        app:layout_constraintEnd_toStartOf="@+id/btnGuess0_2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btnGuess0_0"
+        app:layout_constraintTop_toTopOf="@+id/btnGuess0_0"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <Button
+        android:id="@+id/btnGuess0_2"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        app:layout_constraintEnd_toStartOf="@+id/btnGuess0_3"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btnGuess0_1"
+        app:layout_constraintTop_toTopOf="@+id/btnGuess0_1"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <Button
+        android:id="@+id/btnGuess0_3"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        app:layout_constraintEnd_toStartOf="@+id/btnGuess0_4"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btnGuess0_2"
+        app:layout_constraintTop_toTopOf="@+id/btnGuess0_2"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <Button
+        android:id="@+id/btnGuess0_4"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btnGuess0_3"
+        app:layout_constraintTop_toTopOf="@+id/btnGuess0_3"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <Button
+        android:id="@+id/btnGuess1_1"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        app:layout_constraintEnd_toStartOf="@+id/btnGuess1_2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btnGuess1_0"
+        app:layout_constraintTop_toTopOf="@+id/btnGuess1_0"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <Button
+        android:id="@+id/btnGuess1_2"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        app:layout_constraintEnd_toStartOf="@+id/btnGuess1_3"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btnGuess1_1"
+        app:layout_constraintTop_toTopOf="@+id/btnGuess1_1"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <Button
+        android:id="@+id/btnGuess1_3"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        app:layout_constraintEnd_toStartOf="@+id/btnGuess1_4"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btnGuess1_2"
+        app:layout_constraintTop_toTopOf="@+id/btnGuess1_2"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <Button
+        android:id="@+id/btnGuess1_4"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btnGuess1_3"
+        app:layout_constraintTop_toTopOf="@+id/btnGuess1_3"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <Button
+        android:id="@+id/btnGuess2_1"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        app:layout_constraintEnd_toStartOf="@+id/btnGuess2_2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btnGuess2_0"
+        app:layout_constraintTop_toTopOf="@+id/btnGuess2_0"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <Button
+        android:id="@+id/btnGuess2_2"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        app:layout_constraintEnd_toStartOf="@+id/btnGuess2_3"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btnGuess2_1"
+        app:layout_constraintTop_toTopOf="@+id/btnGuess2_1"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <Button
+        android:id="@+id/btnGuess2_3"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        app:layout_constraintEnd_toStartOf="@+id/btnGuess2_4"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btnGuess2_2"
+        app:layout_constraintTop_toTopOf="@+id/btnGuess2_2"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <Button
+        android:id="@+id/btnGuess2_4"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btnGuess2_3"
+        app:layout_constraintTop_toTopOf="@+id/btnGuess2_3"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <Button
+        android:id="@+id/btnGuess3_1"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        app:layout_constraintEnd_toStartOf="@+id/btnGuess3_2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btnGuess3_0"
+        app:layout_constraintTop_toTopOf="@+id/btnGuess3_0"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <Button
+        android:id="@+id/btnGuess3_2"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        app:layout_constraintEnd_toStartOf="@+id/btnGuess3_3"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btnGuess3_1"
+        app:layout_constraintTop_toTopOf="@+id/btnGuess3_1"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <Button
+        android:id="@+id/btnGuess3_3"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        app:layout_constraintEnd_toStartOf="@+id/btnGuess3_4"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btnGuess3_2"
+        app:layout_constraintTop_toTopOf="@+id/btnGuess3_2"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <Button
+        android:id="@+id/btnGuess3_4"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btnGuess3_3"
+        app:layout_constraintTop_toTopOf="@+id/btnGuess3_3"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <Button
+        android:id="@+id/btnGuess4_2"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        app:layout_constraintEnd_toStartOf="@+id/btnGuess4_3"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btnGuess4_1"
+        app:layout_constraintTop_toTopOf="@+id/btnGuess4_1"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <Button
+        android:id="@+id/btnGuess4_1"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        app:layout_constraintEnd_toStartOf="@+id/btnGuess4_2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btnGuess4_0"
+        app:layout_constraintTop_toTopOf="@+id/btnGuess4_0"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <Button
+        android:id="@+id/btnGuess4_4"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btnGuess4_3"
+        app:layout_constraintTop_toTopOf="@+id/btnGuess4_3"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <Button
+        android:id="@+id/btnGuess4_3"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        app:layout_constraintEnd_toStartOf="@+id/btnGuess4_4"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btnGuess4_2"
+        app:layout_constraintTop_toTopOf="@+id/btnGuess4_2"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

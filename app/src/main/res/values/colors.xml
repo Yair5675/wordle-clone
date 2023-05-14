@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="opening_activity_clr">#6AAD64</color>
+    <color name="opening_btns_clr">#FF6200EE</color>
+    <color name="normal_btn_background_clr">#909184</color>
+    <color name="displaced_btn_bg_clr">#c4c400</color>
+    <color name="correct_btn_bg_clr">#00ab17</color>
+    <color name="btn_text_clr">#FFFFFFFF</color>
+    <color name="incorrect_btn_bg_clr">#1f2024</color>
+    <color name="stats_clr">#42e9f5</color>
+    <color name="correct_word_clr">#AA00FF</color>
+    <color name="background_color">#262620</color>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+</resources>

@@ -1,0 +1,43 @@
+<resources>
+    <!--> Opening screen: <-->
+    <string name="app_name">Wordle</string> <!--> The name of the app <-->
+    <!--> The title above the Wordle logo <-->
+    <string name="welcome_title"><b><i>Welcome to</i></b></string>
+    <!--> The text of the button connecting to the normal-mode Wordle <-->
+    <string name="normal_mode_btn"><b>Let\'s start!</b></string>
+    <!--> The text of the button connecting to the statistics of the user <-->
+    <string name="rush_mode_btn"><b>Statistics</b></string>
+    <!--> The text crediting the awesome programmer who made this app: <-->
+    <string name="credits">Made by Yair</string>
+
+    <!--> Normal mode screen: <-->
+    <!--> Backspace symbol for the keyboard <-->
+    <string name="backspace"><b>⌫</b></string>
+    <!--> The Toast message that appears if you write the same word more than once <-->
+    <string name="duplicate_word_msg">You\'ve already written this word</string>
+    <!--> The Toast message that appears if you write a word which isn't in the dictionary <-->
+    <string name="unknown_word_msg">\"%s\" isn\'t in the word list</string>
+
+    <!--> Statistics mode screen: <-->
+    <!--> The little 'statistics' title in the screen <-->
+    <string name="stats_title"><b>Statistics</b></string>
+    <!--> The following 4 are the description of the little statistics in the screen: <-->
+    <string name="played_desc">Played</string> <!--> Description beneath the times played <-->
+    <string name="win_perc_desc">Win %</string> <!--> Description beneath the user's chance to win <-->
+    <string name="current_streak_desc">Current\n Streak</string> <!--> Description beneath the user's current streak<-->
+    <string name="max_streak_desc">Max\n Streak</string> <!--> Description beneath the user's largest ever streak <-->
+
+    <!--> The big line which presents the correct word for the previous game: <-->
+    <string name="correct_word_txt"><b>Correct word: %1$s</b></string>
+    <!--> The line which presents the amount of guesses the user guessed: <-->
+    <string name="guesses_data"><b>Guesses: %1$d</b></string>
+    <!--> The line which presents the amount of time it took the user to guess the word: <-->
+    <string name="time_data"><b>Time: %1$s</b></string>
+    <!--> The line which presents the quickest time that the user ever guessed a word: <-->
+    <string name="best_time"><b>Best time: %1$s</b></string>
+
+    <!--> The buttons in the statistics activity: <-->
+    <string name="back_to_menu"><b>Back to menu</b></string> <!--> The text on the 'menu' button <-->
+    <string name="restart_btn_text"><b>Let\'s go again!</b></string> <!--> The text on the 'restart' button <-->
+    <string name="clear_stats_txt"><b>Clear stats</b></string> <!--> The text on the 'clear statistics' button <-->
+</resources>
